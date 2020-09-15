@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sample;
+
+
+message FineOneTrackRequest {
+  int32 id = 1;
+}
+
+message Track {
+  int32 id = 1;
+  string name = 2;
+}
+
+service MusicService {
+  rpc FindOneTrack (FineOneTrackRequest) returns (Track);
+}
